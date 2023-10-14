@@ -1,0 +1,76 @@
+●HTML is a 'Markup Language'
+└ 웹페이지에 있는 다양한 콘텐츠에 각기 다른 의미(역할)를 부여
+●HTML Element
+- Elements tell the browser which kind of content is displayed
+<h1>		Hello World!		</h1>
+		└ Element Content
+└    		HTML Tags	  	┘
+
+●HTML Element를 추가하는 이유
+- Without extra annotation, content often has no clear meaning.
+
+●Inline CSS style
+└ HTML Tag에 style 속성을 추가할 수 있다. 
+ex) <h1 style="font-family: sans-serif; text-align: center; color: red">
+        내용
+      </h1>
+
+●CSS Rule
+p{
+color: #534b4b;
+}
+
+p → CSS Selector: A Type Selector
+color: #534b4b; → CSS Property + Value
+
+●Global CSS style
+<style>
+스타일 요소
+</style>
+
+●Page Metadata
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+●Page Content
+<body>
+      <h1>Welcome!</h1>
+</body>
+●HTML Version을 알려줌
+<!DOCTYPE html>
+
+●CSS(Cascading Style Sheets)라고 하는 이유
+└ 다수의 CSS 규칙은 하나의 동일한 요소에 영향을 미칠 수 있어서
+
+●px(픽셀)
+└ 고해상도가 저해상도보다 픽셀 수가 많다. 그러므로 같은 픽셀을 설정하더라도 고해상도에서 크기가 더 작다. 이때 기기별 픽셀을 이용하면 크기가 자동으로 조정된다. 
+└ 픽셀은 치수를 설정할 수 있는 절대 단위이다. 절대단위란 장치 해상도 이외의 다른 요소와는 관련이 없다는 의미인데 웹사이트 내부에서 임의로 크기가 커지거나 작아지지 않는다. 장치의 영향은 받으나 화면 너비 등과 같은 요소에는 아무런 영향을 받지 않는다.
+
+상대단위로는 rem과 %가 있다.
+
+● google font 이용시
+font-family: 'font', fallback font;
+└ 구글에서 가져오는 경우'' 붙이고 , 이후 fallback font 이용
+ fallback fontf란 해당 글꼴을 불러오기 실패하는 경우 대신 사용하는 글꼴
+
+● HTML에서 특수 문자를 출력하는 방법
+<pre>...</pre>를 사용 공백도 보존됨
+또는 일부 수학 공식의 경우 HTML 엔티티를 이용할 수 있음
+ex) &gt; → > 
+&lt; → <
+
+● image 추가 
+<img src="이미지" alt="fallback문서">
+└ void 요소이기에 종료 테그가 없다.
+
+● broder-radius
+└ width와 height의 절반값으로 지정할 시 원형으로 된다. 왜냐하면 broder-radius의 값은 꼭지점으로부터 x축, y축으로부터 해당 거리를 설정하고 거기서 원을 그리라고 지정한 것
+
+● img의 경우 text-align을 이용하여도 위치가 변하지 않는데 그 이유는 text-align은 해당 요소의 컨텐츠 부분이 이동하는 것
+그래서 해당 요소 자체의 위치를 옮기지는 않는다. 따라서 이러한 이미지를 옮기려면 해당 이미지를 컨텐츠로 두고 있는 요소의 text-align을 바꾸어주면 된다.
+
+● 의사 선택자
+└ 특정 조건을 충족하는 요소의 스타일을 설정할 수 있는 :hover 와 같은 css 선택자
